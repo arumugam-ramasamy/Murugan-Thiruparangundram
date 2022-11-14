@@ -1,7 +1,15 @@
 const express = require("express");
 const device = require("../models/Device") ;
+const constants = require ("../models/GLConstants") ;
 
 const router = express.Router();
+glconstants = new constants({
+    "gl_monitor_constants_name" : "gl_history_clean_interval",
+    "gl_monitor_constants_desc" : "variable to control history removal",
+    "gl_monitor_constants_val" : 1209600000
+}) ;
+
+glconstants.save(glconstants) ;
 router.post("/device", function(req, res, next) {
     if (!req.body.device_id) {
         res.status(400).send ("deice id cannot be empty");

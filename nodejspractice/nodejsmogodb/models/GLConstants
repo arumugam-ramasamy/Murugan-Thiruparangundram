@@ -1,0 +1,21 @@
+const mongoose = require('mongoose') ;
+
+
+const glConstantsSchema = new mongoose.Schema({
+    gl_monitor_constants_name : {
+        type :String, 
+        required : true 
+    },
+    gl_monitor_constants_desc: {
+        type: String, 
+        required : true
+    },
+    gl_monitor_constants_val: {
+        type : Number,
+        required : true
+    }
+}) ;
+
+const GLConstants = mongoose.model ('GLConstants', glConstantsSchema, 'GLConstants');
+
+module.exports = GLConstants

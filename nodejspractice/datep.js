@@ -27,3 +27,4 @@ console.log(year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" 
 
 // prints time in HH:MM format
 console.log(hours + ":" + minutes);
+console.log (date_ob.getTime()) ;
