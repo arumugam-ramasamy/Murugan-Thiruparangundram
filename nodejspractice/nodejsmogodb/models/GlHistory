@@ -1,0 +1,22 @@
+const mongoose = require('mongoose') ;
+
+const glHistorySchema = new mongoose.Schema({
+	device_id : {
+        type: String, 
+        required : true 
+    },
+    gl_status : {
+        type : Boolean,
+        required : true
+    },
+    last_update_time : {
+        type : Date, 
+        required : true,
+        default : Date.now()
+    }
+    
+});
+
+const GLHistory = mongoose.model ('GLHistory', glHistorySchema, 'GLHistory');
+
+module.exports = GLHistory;

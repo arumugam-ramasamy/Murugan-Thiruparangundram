@@ -19,8 +19,10 @@ let minutes = date_ob.getMinutes();
 // current seconds
 let seconds = date_ob.getSeconds();
 
+let day = date_ob.getDay() ;
+
 // prints date in YYYY-MM-DD format
-console.log(year + "-" + month + "-" + date);
+console.log(year + "-" + month + "-" + date + " " + day);
 
 // prints date & time in YYYY-MM-DD HH:MM:SS format
 console.log(year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds);
